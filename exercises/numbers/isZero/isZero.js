@@ -5,7 +5,15 @@
  * @returns {boolean} True if num is 0 and false otherwise
  */
 function isZero(num) {
-  return num === 0;
+  if (num === 0) {
+    return true
+  } else {
+    return false
+
+
+
+  }
+
 }
 
 if (require.main === module) {
