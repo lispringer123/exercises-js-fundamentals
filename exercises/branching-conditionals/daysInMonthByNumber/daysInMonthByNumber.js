@@ -18,41 +18,46 @@
 function daysInMonthByNumber(monthNum) {
   if (!Number.isInteger(monthNum) || monthNum < 1 || monthNum > 12) {
     throw new Error(`Expected a month number from 1-12, received: ${monthNum}`);
-  } else {
-    if (monthNum <= 3) {
-      if (monthNum === 2) {
-        console.log(29)
-      } else {
-        console.log(31)
-      }
-    
-    }
-    if (4 <= monthNum <= 7) {
-      if (monthNum%2 === 0) {
-        console.log(30)
-      } else {
-        console.log(31)
-      }
-    } 
-    if (8 <= monthNum <= 10) {
-      if (monthNum === 9) {
-        console.log(30)
-      } else {
-        console.log(31)
-      }}
-    if (numMonths === 11) {
+  } else if (monthNum === 6) {
       console.log(30)
-    } else{
-      console.log(31)
+      return true;
+  } else if (monthNum === 5) {
+      console.log(31);
+      return true;
+  } else if (monthNum === 4) {
+      console.log(30);
+      return true;
+  } else if (monthNum === 3) {
+      console.log(31);
+      return true;
+  } else if (monthNum ===2) {
+      console.log(29);
+      return true;
+  } else if (monthNum ===1){
+      console.log(31);
+      return true;
+  } else if (monthNum ===7){
+      console.log(31);
+      return true;
+  } else if (monthNum === 8) {
+      console.log(31);
+      return true;
+  } else if (monthNum === 9) {
+      console.log(30);
+      return true;
+  } else if (monthNum === 10) {
+      console.log(31);
+      return true;
+  } else if (monthNum === 11) {
+      console.log(30);
+      return true;
+  } else if (monthNum === 12) {
+      console.log(31);
+      return true;
     }
-
-  
-
-
-
-
-  
 }
+     
+
 
 if (require.main === module) {
   console.log('Running sanity checks for daysInMonthByNumber:');
