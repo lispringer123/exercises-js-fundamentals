@@ -18,6 +18,13 @@ function isValidTriangle(a, b, c) {
     side of the same length? Imagine the angle between the two sides increasing
     from 0º and you drawing the third side. What's the largest this third side
     could ever be?
+
+  (a ^ 2) + (b ^ 2) = (c ^ 2)
+
+
+
+
+
   */
 }
 

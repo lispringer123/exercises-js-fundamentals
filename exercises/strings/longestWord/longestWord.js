@@ -8,14 +8,22 @@
  */
 
 function longestWord(string) {
-  // This is your job. :)
+  string.split(' ')
+  let longestWordSoFar = string[0]
+  for (element in string){
+    if(element.length >longestWordSoFar.length){
+      longestWordSoFar = element
+      console.log('The longest word so far is:', longestWordSoFar)
+    }
+  }
+  return longestWordSoFar
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for longestWord:');
+  console.log(longestWord('t mm sss') === 'sss');
+  console.log(longestWord('a mm sss mmmm') === 'mmmm');
 
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
 }
 
 module.exports = longestWord;
