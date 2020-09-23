@@ -32,13 +32,14 @@ function printSolidRightTriangle(height) {
     1. How many lines to we want to print?
     2. How many characters should be on each line?
   */
+ let currentPoint = height - (height-1)
   for (let i = 0; i < height; i++) {
     // The _____ is meant to be "fill in the blank"
-
-    let numChars = _____;
-
+    let numChars = currentPoint
     helpers.printCountTimes('#', numChars);
     helpers.printNewLine();
+    currentPoint++
+
   }
 }
 

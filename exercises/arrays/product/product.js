@@ -9,14 +9,20 @@
  * @returns {number} The product of the numbers in the array
  */
 function product(array) {
-  // This is your job. :)
+  theCurrentProduct = 1
+  for (i = 0; i < array.length; i++){
+    theCurrentProduct = array[i] * theCurrentProduct
+    
+  }
+  console.log('The array is: ', array)
+  console.log('The product of the array is: ',theCurrentProduct) 
+  return theCurrentProduct
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for product:');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(product([2,2]) === 4)
+  console.log(product([3,2]) === 6)
 }
 
 module.exports = product;

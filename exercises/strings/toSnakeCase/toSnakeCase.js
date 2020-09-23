@@ -14,14 +14,23 @@
  */
 
 function toSnakeCase(string) {
-  // This is your job. :)
+  console.log('The string is: ', string)
+  newString = string.toLowerCase()
+  newString = newString.replace(/ /g, '_')
+  return newString
 }
+
+
+
+
 
 if (require.main === module) {
   console.log('Running sanity checks for toSnakeCase:');
+  console.log(toSnakeCase('HeLlo fRIENds') === 'hello_friends') 
+  console.log(toSnakeCase('HELLO FRIENDS I AM JIMMY') === 'hello_friends_i_am_jimmy')
+  console.log(toSnakeCase('hEy mAn what is up') === 'hey_man_what_is_up')
 
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  
 }
 
 module.exports = toSnakeCase;

@@ -17,14 +17,30 @@
  */
 
 function toTitleCase(string) {
-  // This is your job. :)
+  lowerCaseString = string.toLowerCase()
+  array = lowerCaseString.split(' ')
+  console.log('The array is:', array)
+  
+  
+  for (let i = 0; i < array.length; i++){
+    firstChar = array[i][0]
+    console.log('The first character of the word: ', firstChar)
+    updatedFirstChar = firstChar.toUpperCase()
+    console.log('The updated first character of the word is: ', updatedFirstChar)
+    array[i][0] = array[i][0].replace(array[i][0], updatedFirstChar)
+    console.log(array[i][0])
+   
+    
+
+  }
+
+
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for toTitleCase:');
+  console.log(toTitleCase('wElCoMe to THE wILD wiLD WEST!') === 'Welcome To The Wild Wild West!' )
 
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
 }
 
 module.exports = toTitleCase;

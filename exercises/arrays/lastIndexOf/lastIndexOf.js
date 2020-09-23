@@ -16,14 +16,32 @@
  *  array, or -1 if it's not found.
  */
 function lastIndexOf(haystack, needle) {
-  // This is your job. :)
+  console.log('The original array is: ', haystack);
+  backwardsArray = haystack.reverse();
+  console.log('The reversed array is: ', backwardsArray);
+  for (i = 0; i < backwardsArray.length; i++){
+    if(backwardsArray[i] === needle){
+      indexOfReverse = backwardsArray.indexOf(backwardsArray[i]);
+      console.log('The index of the needle in the reversed array is:', indexOfReverse);
+
+      indexOfLastElement = haystack.length - 1
+      console.log('The index of the last element in the original array is: ', indexOfLastElement);
+
+      theLastIndexOf = indexOfLastElement - indexOfReverse;
+      console.log('The index of the first occurence of the needle is: ', theLastIndexOf );
+      return theLastIndexOf;
+    }
+  }
+  return -1
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for lastIndexOf:');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(lastIndexOf([1, 2, 2], 2) === 2)
+  console.log(lastIndexOf([1, 2, 2, 2], 2) === 3)
+  console.log(lastIndexOf([1, 3, 1, 1, 3], 3) === 4)
+  console.log(lastIndexOf([1, 3, 3, 3, 3], 1) === 0)
+  console.log(lastIndexOf([1, 3, 1, 1, 3, 1, 5], 1) === 5)
 }
 
 module.exports = lastIndexOf;

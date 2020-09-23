@@ -13,11 +13,23 @@
  */
 
 function replaceCharacter(string, target, replaceWith) {
-  // This is your job. :)
+  let oldString = string
+  for (i = 0; i < oldString.length; i++){
+    if(oldString[i] === target){
+      let newString = oldString.replace(/target/g, replaceWith)
+      console.log('The new string is:', newString)
+      return newString
+    }
+  }
 }
+ 
+    
+
 
 if (require.main === module) {
   console.log('Running sanity checks for replaceCharacter:');
+  console.log(replaceCharacter('hh', 'h', 'b') === 'bb');
+  console.log(replaceCharacter('hhh', 'h', 'c') === 'ccc');
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?

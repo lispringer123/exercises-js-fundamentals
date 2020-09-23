@@ -8,21 +8,25 @@
  */
 
 function longestWord(string) {
-  string.split(' ')
-  let longestWordSoFar = string[0]
-  for (element in string){
-    if(element.length >longestWordSoFar.length){
-      longestWordSoFar = element
-      console.log('The longest word so far is:', longestWordSoFar)
+  array = string.split(' ')
+  console.log('The array is: ',array)
+  let longestWordSoFar = array[0]
+  var i;
+  for (i = 0; i < array.length; i++){
+    if (array[i].length > longestWordSoFar.length){
+      longestWordSoFar = array[i]
     }
   }
+  console.log('The longest Word is: ',longestWordSoFar)
   return longestWordSoFar
-}
+} 
+ 
 
 if (require.main === module) {
   console.log('Running sanity checks for longestWord:');
-  console.log(longestWord('t mm sss') === 'sss');
-  console.log(longestWord('a mm sss mmmm') === 'mmmm');
+  console.log(longestWord('t mm') === 'mm');
+  console.log(longestWord('t mmm') === 'mmm');
+
 
 }
 

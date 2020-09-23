@@ -19,14 +19,25 @@
  * @returns {number} The median of the numbers in the array
  */
 function median(array) {
-  // This is your job. :)
-}
+  if (array.length%2 === 0){ 
+    
+
+  }
+  if (array.length%2 !== 0){
+    theMedian = array[(array.length+1)/2]
+
+  }
+  
+
 
 if (require.main === module) {
   console.log('Running sanity checks for median:');
+  console.log(median([1,2,3,4,5]) === 3)
+  console.log(median([1,2,3,4,5,6,7]) === 4)
 
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+
 }
+}
+
 
 module.exports = median;

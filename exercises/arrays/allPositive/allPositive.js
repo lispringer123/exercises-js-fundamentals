@@ -12,14 +12,46 @@
  *   and false otherwise.
  */
 function allPositive(array) {
-  // This is your job. :)
+  let countNegative = 0
+  let countPositive = 0
+  console.log('The array is: ', array)
+  for (let i = 0; i < array.length; i++){
+    if(Math.sign(array[i]) === -1){
+      console.log('Math.Sign(',array[i],')=', Math.sign(array[i]))
+      console.log('The negative element in the array is: ', array[i])
+      countNegative++
+      }
+  }
+  for (let i = 0; i < array.length; i++){
+    if(Math.sign(array[i]) === 1){
+      console.log('Math.Sign(',array[i],')=', Math.sign(array[i]))
+      console.log('The positive element in the array is: ', array[i])
+      countPositive++
+      }
+  }
+  if(countNegative > 0){
+    console.log('Turns out there were some negatives')
+    return false
+  }
+  if (countNegative === 0){
+    console.log('All good here, everything is positive')
+    return true
+  }
 }
+
+     
+
 
 if (require.main === module) {
   console.log('Running sanity checks for allPositive:');
+  console.log(allPositive([1, 2, 3, 4, 5]) === true);
+  console.log(allPositive([2, 5, 6, 7, 7]) === true);
+  console.log(allPositive([-1, 2, 3, 4, 5]) === false);
+  console.log(allPositive([1, 2, -3, 4, 5]) === false);
+  console.log(allPositive([1, -2, -3, -4, 5]) === false);
+  console.log(allPositive([1]) === true);
 
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+
 }
 
 module.exports = allPositive;

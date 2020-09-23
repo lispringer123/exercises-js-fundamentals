@@ -16,14 +16,28 @@
  * @returns {number} The number of elements in the array less than threshold
  */
 function countLessThan(array, threshold) {
-  // This is your job. :)
+  numberToBeat = threshold;
+  count = 0
+  for (i = 0; i < array.length; i++){
+    if (array[i] < numberToBeat){
+      count ++
+    }
+  }
+  return count
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for countLessThan:');
+  console.log(countLessThan([1, 2, 3, 4, 5], 2) === 1);
+  console.log(countLessThan([1, 2, 3, 4, 5], 17) === 5);
+  console.log(countLessThan([1, 2, 1, 2, 3, 4, 1, 2, 1], 1) === 0);
+  console.log(countLessThan([10, 10, 10, -10, 15, 7], 10) === 2);
+  
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }
 
 module.exports = countLessThan;
+
+
