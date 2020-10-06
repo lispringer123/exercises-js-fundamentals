@@ -20,7 +20,8 @@ function toTitleCase(string) {
   lowerCaseString = string.toLowerCase()
   array = lowerCaseString.split(' ')
   console.log('The array is:', array)
-  
+
+
   
   for (let i = 0; i < array.length; i++){
     firstChar = array[i][0]
@@ -29,8 +30,6 @@ function toTitleCase(string) {
     console.log('The updated first character of the word is: ', updatedFirstChar)
     array[i][0] = array[i][0].replace(array[i][0], updatedFirstChar)
     console.log(array[i][0])
-   
-    
 
   }
 

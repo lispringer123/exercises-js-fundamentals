@@ -1,5 +1,5 @@
 /**
- * Given three numbers, returns true is a triangle exists with those three
+ * Given three numbers, returns true if a triangle exists with those three
  * numbers as side lengths, and false otherwise.
  *
  * @param {number} a Side length #1
@@ -8,6 +8,16 @@
  * @returns {boolean} True if a triangle exists with side lengths of a, b, and c. Returns false otherwise.
  */
 function isValidTriangle(a, b, c) {
+  if (a+b > c || a + c > b || b + c || a){
+    console.log('Yes, this is a valid triangle')
+    return true
+  } else{
+    console.log('No, this is not a valid triangle')
+    return false
+  }
+}
+ 
+  
   /*
     Before you go Googling, get out a piece of paper and draw some triangles.
 
@@ -26,7 +36,7 @@ function isValidTriangle(a, b, c) {
 
 
   */
-}
+
 
 if (require.main === module) {
   console.log('Running sanity checks for isValidTriangle:');

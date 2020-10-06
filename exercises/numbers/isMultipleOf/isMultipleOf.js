@@ -13,7 +13,7 @@
  * @returns {boolean} True if n is a multiple of d and false otherwise
  */
 function isMultipleOf(n, d) {
-  // This is your job. :)
+
 
   // Consider handling two cases separately:
   //   1. When d === 0

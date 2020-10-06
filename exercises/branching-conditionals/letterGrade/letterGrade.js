@@ -16,34 +16,9 @@
 
 
 function letterGrade(percentGrade) {
-  let gpa = (percentGrade / 100)
-  if (0.97<= gpa >= 1.00) {
-    console.log('A+')
-  } else if (0.93 >= gpa <= 0.96) {
-    console.log('A')
-  } else if (0.90 >= gpa <= 0.92) {
-    console.log('A-')
-  } else if (0.87 >= gpa <= 0.89) {
-    console.log('B+')
-  } else if (0.83 >= gpa <= 0.86) {
-    console.log('B')
-  } else if (0.80 >= gpa <= 0.82) {
-    console.log('B-')
-  } else if (0.77 >= gpa <= 0.79) {
-    console.log('C+')
-  } else if (0.73 >= gpa <= 0.76) {
-    console.log('C')
-  } else if (0.70 >= gpa <= 0.72) {
-    console.log('C-')
-  } else if (0.67 >= gpa <= 0.69) {
-    console.log('D+')
-  } else if (0.63 >= gpa <= 0.66) {
-    console.log('D')
-  } else if (0.60 >= gpa <= 0.62) {
-    console.log('D-')
-  } else if (0.00 <= gpa < 0.60) {
-    console.log('F')
-  }
+  if(percentGrade >= ){}
+  
+}
   
 
 
@@ -55,43 +30,7 @@ function letterGrade(percentGrade) {
 
 if (require.main === module) {
   console.log('Running sanity checks for letterGrade:');
-  letterGrade(100) //A+
-  
-  
-  letterGrade(97) //A+
-  letterGrade(93)
-  letterGrade(92)
-  letterGrade(90)
 
-  letterGrade(89)
-  letterGrade(87)
-  letterGrade(83)
-  letterGrade(82)
-  letterGrade(80)
-
-  letterGrade(79)
-  letterGrade(77)
-  letterGrade(73) 
-  letterGrade(72)// c
-  letterGrade(70) //c -
-
-  letterGrade(69) //d +
-  letterGrade(67) // d
-  letterGrade(63) // d 
-  letterGrade(62) // d-
-  letterGrade(60) // d-
-
-  letterGrade(59) //f
-  letterGrade(50)
-
-  letterGrade(40)
-
-  letterGrade(30)
-
-  letterGrade(20)
-
-  letterGrade(10)
-  letterGrade(0)  // f
 
 
 
