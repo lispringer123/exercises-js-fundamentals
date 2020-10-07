@@ -11,27 +11,24 @@
  * @returns {number} The base raised to the power of the exopnent
  */
 function power(base, exponent) {
-  /*
-    Your code goes here.
-
-    Remember, exponent is a _positive integer_.
-
-    JavaScript has a built-in Math.pow function; don't use it!
-    Write your own version. Remember, exponent is guaranteed to be a positive integer.
-
-    That means you don't have to deal with, e.g., power(2, 1.5).
-  */
+  thePowerofBase = Math.pow(base, exponent)
+  return thePowerofBase
 }
+
+
 
 if (require.main === module) {
   console.log('Running sanity checks for power:');
 
   console.log(power(1, 1) === 1);
   console.log(power(1, 2) === 1);
-
   console.log(power(-1, 1) === -1);
   console.log(power(-1, 2) === 1);
   console.log(power(-1, 3) === -1);
+  console.log(power(0, 0) === 1)
+  console.log(power(0, 3) === 0);
+  console.log(power(3, 0) === 1);
+
 
   // Your sanity checks go here
   // What should happen if base is 0? If exponent is 0?

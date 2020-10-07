@@ -16,7 +16,7 @@
 
 
 function letterGrade(percentGrade) {
-  if(percentGrade >= ){}
+
   
 }
   

@@ -16,17 +16,23 @@
  * @returns {boolean} True if num is even and false otherwise
  */
 function remainderOf(n, d) {
-  if (n/ d <= 1){
-    
-  }
-  console.log(n / d)
+  let division = parseInt(n/d)
+  console.log(division)
+  let subtraction = division * d
+  console.log(subtraction)
+  let remainder = n - subtraction
+  console.log('The remainder of ' + n + ' divided by ' + d + ' is ' +  remainder)
+  return remainder
 
 }
 
 
 if (require.main === module) {
   console.log('Running sanity checks for remainderOf');
-  console.log(remainderOf(3, 6))
+  console.log(remainderOf(10, 3) === 1)
+  console.log(remainderOf(9, 3) === 0)
+  console.log(remainderOf(10, 5) === 0)
+  console.log(remainderOf(129, 17)=== 10)
 }
   
 
